@@ -1,51 +1,146 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>-->
 <html>
-  <head>
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+<title> Codejae </title>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Homemade+Apple' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
 
-    {% include meta.html %}
+<style type="text/css">
+    html{
+        padding: -1000px;
+    }
+    body{
+        background-image: url("http://i.imgur.com/d9SJI2m.jpg");
+        /*background-position: ;*/
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        /*, repeat-y;*/
+        /*display:block;*/
+        /*background-size: 100%;*/
+        padding-bottom:-50px;
+    }
+    /*img{*/
+    /*    padding:-20px;*/
+    /*}*/
+/*----------------------------------LINKS-----------------------------------*/
+    a{
+        /*height:100vh;*/
+        padding-top: 100px;
+    }
 
-    <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+     a:visited { /*change color when visited, hovered over, etc*/
+         color:purple; 
+         background-color: transparent; 
+         text-decoration: none;
+     }
+     a:link{
+         color:white;
+         /*height: 100vh;*/
+     }
+     a:hover{
+         color:brown;
+         /*height: 100vh;*/
+     }
+    #links{
+        color:white;
+        position:relative;
+        padding-top: 90vh;
+        display:inline-block;
+        font-family: 'Satisfy', cursive;
+        font-size: 30px;
+        /*padding-right: 50%;*/
+        padding-bottom: 3.3%;
+        left: 20px;
+    }
+/*----------------------------------------------------------------------------*/
 
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+    about{
 
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
-  </head>
+        /*padding-top: 1000px;*/
+        /*position: relative;*/
+        text-align: center;
+        background-size:cover;
+        padding-top: 20vh;
+        display:block;
+        color:white;
+        background: red;
+        /*padding: 200px;*/
+        margin-top: 9.5vh;
+        margin-left:-20px;
+        margin-right:-20px;
+        /*background-size: cover;*/
+        /*height: 50vh;*/ /*THIS ADDS TO BOTTOM OF TEXT*/
+        /*margin: 50px;*/
+        /*border: 2px solid;*/
+        /*border-color: white;*/
+        /*border-radius: 25px;*/
+        opacity: 0.5;
+    }
+     portfolio{
+        position: relative;
+        display: block;
+        color:white;
+        margin-left:-20px;
+        margin-right:-20px;
+        background: #A1A838;
+        padding: 200px;
+        /*margin: 50px;*/
+        /*border: 2px solid;*/
+        /*border-color: white;*/
+        /*border-radius: 25px;*/
+        opacity: 0.5;
+    }
+     contact{
+        position: relative;
+        display: block;
+        color:white;
+        background: #D1686D;
+        padding: 200px;
+        margin-left:-20px;
+        margin-right:-20px;
+        /*margin: 50px;*/
+        opacity: 0.5;
+        /*border: 2px solid;*/
+        /*border-color: white;*/
+        /*border-radius: 25px;*/
+    }
+    
 
-  <body>
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
 
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
+</style>
+</head>
+<body>
 
-          <nav>
-            <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/about">About</a>
-          </nav>
-        </header>
-      </div>
+    <div id= links> <!-- this will have links -->
+        <a href="#about">About</a> |
+        <a href="#portfolio">Portfolio</a> |
+        <a href="#contact">contact</a>
     </div>
+</body>
+<!---------------------------------------------------------------------->
+<!--<img src="http://cdn3.vox-cdn.com/uploads/chorus_asset/file/917470/iphone-6-travel-photo-review-mann-header.0.jpg"></img>-->
+<about>
+        <div id="about">
+        <p>I'm currently a student at the University of Texas at Austin majoring in computer science. I hope to graduate by December 2016. </p>
+        </div>
+</about>
+<!---------------------------------------------------------------------->
+<portfolio>
+        <div id="portfolio">
+            <p>these are my works so far</p>
+            <p> see if spacer works </p>
+        </div>
+</portfolio>
+<!---------------------------------------------------------------------->
+<contact>
+        <div id="contact">
+            <p>(p) 832 - 212 - 9497</p>
+            <p>email: jaehlee@utexas.edu</p>
+        </div>
+</contact>
+<!--</body>-->
 
-    <div id="main" role="main" class="container">
-      {{ content }}
-    </div>
-
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-          {% include svg-icons.html %}
-        </footer>
-      </div>
-    </div>
-
-    {% include analytics.html %}
-  </body>
 </html>
